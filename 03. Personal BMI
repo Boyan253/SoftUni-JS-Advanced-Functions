@@ -1,0 +1,32 @@
+function solve(name, age, weight, height){
+    let bmi = Math.round((weight / ((height / 100) ** 2)));
+    let status = calcWeight(bmi)
+    let obj = {
+        name:name,
+        personalInfo: {
+            age,
+            weight,
+            height,
+        },
+        BMI: bmi,
+        status,
+    }
+    if(status == 'obese'){
+        obj.recommendation = 'admission required'
+    }
+    return obj;
+    
+    
+    function calcWeight(arg){
+        if(arg < 18.5){
+            return 'underweight'
+        }else if(arg < 25){
+            return 'normal'
+        }else if(arg < 30){
+            return 'overweight'
+        }else{
+            return 'obese'
+        }
+    }
+    
+}
