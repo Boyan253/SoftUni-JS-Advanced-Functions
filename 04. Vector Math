@@ -1,0 +1,19 @@
+solution = {
+    add: function ([x1, x2], [y1, y2]){
+       return [x1 + y1, x2 + y2];
+    },
+    multiply: function ([x, y], scalar){
+       return [x * scalar, y * scalar];
+       
+    },
+    length: function ([x, y]){
+        return Math.sqrt(x ** 2 + y ** 2);
+    },
+    dot: function ([x1, y1], [x2, y2]){
+        return (x1 * x2 + y1 * y2);
+         
+    },
+    cross: function ([x1, y1], [x2, y2]){
+        return x1 * y2 - y1 * x2
+    }
+}
