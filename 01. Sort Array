@@ -1,0 +1,13 @@
+function sort(num, text){   
+
+    let obj = {
+        asc: function (arr){
+            return arr.sort((a, b) => a - b);
+        },
+        desc: function (arr){
+            return arr.sort((a, b) => b - a);
+        },
+    }
+    let func = obj[text];
+    return func(num)
+}
